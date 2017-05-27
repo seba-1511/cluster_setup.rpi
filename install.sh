@@ -6,11 +6,13 @@ read -p "You will now need to enable SSH manually. Press enter."
 sudo raspi-config
 
 # Allow all SSH connections
-sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
-sudo sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+# sudo sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+# sudo sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+# sudo sed -i 's/RSAAuthentication yes/RSAAuthentication no/g' /etc/ssh/sshd_config
+# sudo sed -i 's/PubkeyAuthentication yes/PubkeyAuthentication no/g' /etc/ssh/sshd_config
 
 # Install PSSH
-sudo add-apt-repository ppa:thelupine/ppa
+sudo add-apt-repository ppa:thelupine/ppa # Not sure this line is useful
 sudo apt-get update
 sudo apt -y install pssh
 
@@ -90,6 +92,6 @@ sudo apt-get install -y openmpi
 # Copy Seb's config
 git clone https://github.com/seba-1511/config ~/config
 cd ~/config && sudo sh ./install.sh
-cd ~/config && sudo sh ./copy_config.sh
+
 cd ~/config && pip install -r ./pip_reqs.txt 
 
