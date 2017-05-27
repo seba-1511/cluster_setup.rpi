@@ -26,7 +26,7 @@ sudo apt-get update
 sudo apt-get -y install python2.7
 # Install pip and the pip requirements
 wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
+sudo python get-pip.py
 rm get-pip.py
 # END Python
 
