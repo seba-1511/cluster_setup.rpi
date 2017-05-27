@@ -12,7 +12,7 @@ sudo raspi-config
 # sudo sed -i 's/PubkeyAuthentication yes/PubkeyAuthentication no/g' /etc/ssh/sshd_config
 
 # Install PSSH
-sudo add-apt-repository ppa:thelupine/ppa # Not sure this line is useful
+sudo add-apt-repository -y ppa:thelupine/ppa # Not sure this line is useful
 sudo apt-get update
 sudo apt -y install pssh
 
@@ -21,7 +21,7 @@ sudo apt-get -y install tmux
 # END OpenSSH
 
 # Python Install
-sudo add-apt-repository ppa:fkrull/deadsnakes
+sudo add-apt-repository -y ppa:fkrull/deadsnakes
 sudo apt-get update
 sudo apt-get -y install python2.7
 # Install pip and the pip requirements
@@ -67,7 +67,7 @@ rm ./dein_installer.sh
 
 # NVIM install
 sudo apt-get -y install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get -y install neovim
 sudo apt-get -y install python-dev python-pip python3-dev python3-pip
