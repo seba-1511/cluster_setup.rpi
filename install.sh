@@ -95,3 +95,5 @@ cd ~/config && sudo sh ./install.sh
 
 cd ~/config && pip install -r ./pip_reqs.txt 
 
+# Misc Installs
+sudo apt-get -y install htop
