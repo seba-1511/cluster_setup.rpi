@@ -82,7 +82,7 @@ ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 # END NVIM
 
 # Install OpenMPI
-sudo apt-get install -y openmpi
+sudo apt-get install -y openmpi-bin
 # END OpenMPI
 
 # Install PyTorch
